@@ -1,6 +1,7 @@
 import './App.css'
 import {Switch, Route, Redirect} from 'react-router-dom'
 import Login from './components/Login'
+import NotFound from './components/NotFound'
 
 // use the below bookshelvesList for rendering read status of book items in Bookshelves Route
 
@@ -30,6 +31,8 @@ const bookshelvesList = [
 const App = () => (
   <Switch>
     <Route exact path="/login" component={Login} />
+    <Route exact path="/notfound" component={NotFound} />
+    <Redirect to="/notFound" />
   </Switch>
 )
 
