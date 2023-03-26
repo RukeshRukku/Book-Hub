@@ -4,6 +4,7 @@ import Login from './components/Login'
 import NotFound from './components/NotFound'
 import Home from './components/Home'
 import ProtectedRoute from './components/ProtectedRoute'
+import BookShelves from './components/BookShelves'
 
 // use the below bookshelvesList for rendering read status of book items in Bookshelves Route
 
@@ -34,6 +35,7 @@ const App = () => (
   <Switch>
     <Route exact path="/login" component={Login} />
     <ProtectedRoute exact path="/" component={Home} />
+    <ProtectedRoute eaxct path="/shelf" component={BookShelves} />
     <Route exact path="/not-found" component={NotFound} />
     <Redirect to="/not-found" />
   </Switch>
