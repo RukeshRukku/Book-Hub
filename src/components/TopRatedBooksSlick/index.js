@@ -1,5 +1,6 @@
 import './index.css'
 import {Component} from 'react'
+import {withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Slider from 'react-slick'
@@ -156,4 +157,4 @@ class TopRatedBooksSlick extends Component {
   }
 }
 
-export default TopRatedBooksSlick
+export default withRouter(TopRatedBooksSlick)
