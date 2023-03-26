@@ -80,7 +80,7 @@ class Login extends Component {
                 Password*
               </label>
               <input
-                type="text"
+                type="password"
                 className="form-input"
                 placeholder="Password"
                 id="password"
@@ -120,7 +120,7 @@ class Login extends Component {
                 Password*
               </label>
               <input
-                type="text"
+                type="password"
                 className="form-input"
                 placeholder="Password"
                 id="password"
