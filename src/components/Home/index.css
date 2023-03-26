@@ -4,7 +4,10 @@
 }
 .home-bottom {
   background-color: #e5e5e5;
-  padding: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 2%;
 }
 .home-head {
   font-size: 35px;
@@ -32,8 +35,8 @@
 }
 .color {
   background-color: #e5e5e5;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 3%;
 }
 @media (max-width: 767px) {

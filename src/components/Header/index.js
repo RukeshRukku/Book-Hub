@@ -6,18 +6,14 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import {MdRemoveCircle} from 'react-icons/md'
 
 class Header extends Component {
-  state = {homeClick: true, bookshelvesClick: false, hamBurgerClick: false}
+  state = {hamBurgerClick: false, homeClick: true, bookShelvesClick: false}
 
   changeHomeClick = () => {
-    const {homeClick} = this.state
-    this.setState({homeClick: !homeClick, hamBurgerClick: false})
+    this.setState({homeClick: true, bookShelvesClick: false})
   }
 
   changeBookClick = () => {
-    this.setState(prevState => ({
-      bookshelvesClick: !prevState.bookshelvesClick,
-    }))
-    this.setState({hamBurgerClick: false})
+    this.setState({homeClick: false, bookShelvesClick: true})
   }
 
   logout = () => {
@@ -27,17 +23,17 @@ class Header extends Component {
   }
 
   changeHamBurger = () => {
-    this.setState({homeClick: false, hamBurgerClick: true})
+    this.setState({hamBurgerClick: true})
   }
 
   removeHam = () => {
-    this.setState({homeClick: true, hamBurgerClick: false})
+    this.setState({hamBurgerClick: false})
   }
 
   render() {
-    const {homeClick, bookshelvesClick, hamBurgerClick} = this.state
-    const homeClassName = homeClick ? 'color-change' : ''
-    const bookClassName = bookshelvesClick ? 'color-change' : ''
+    const {hamBurgerClick, bookShelvesClick, homeClick} = this.state
+    const homeClass = homeClick ? 'color-change' : ''
+    const bookClass = bookShelvesClick ? 'color-change' : ''
     return (
       <>
         <nav className="header-nav-lg">
@@ -51,12 +47,12 @@ class Header extends Component {
             </Link>
             <ul className="header-links">
               <li className="list-li" onClick={this.changeHomeClick}>
-                <Link to="/" className={`links-deco ${homeClassName}`}>
+                <Link to="/" className="links-deco">
                   Home
                 </Link>
               </li>
               <li className="list-li" onClick={this.changeBookClick}>
-                <Link to="/shelf" className={`links-deco ${bookClassName}`}>
+                <Link to="/shelf" className="links-deco">
                   Bookshelves
                 </Link>
               </li>
@@ -90,12 +86,12 @@ class Header extends Component {
             <div className="sm-con">
               <ul className="header-links">
                 <li className="list-li" onClick={this.changeHomeClick}>
-                  <Link to="/" className={`links-deco ${homeClassName}`}>
+                  <Link to="/" className="links-deco">
                     Home
                   </Link>
                 </li>
                 <li className="list-li" onClick={this.changeBookClick}>
-                  <Link to="/shelf" className={`links-deco ${bookClassName}`}>
+                  <Link to="/shelf" className="links-deco">
                     Bookshelves
                   </Link>
                 </li>

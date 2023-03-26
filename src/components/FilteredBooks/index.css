@@ -1,0 +1,62 @@
+.list-inner {
+  width: 100%;
+  display: flex;
+}
+.img {
+  height: 150px;
+  width: 100px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.card {
+  width: 190px;
+}
+.book-item {
+  width: 50%;
+  margin-bottom: 30px;
+}
+.link-decoration {
+  text-decoration: none;
+  color: #000000;
+}
+.book-title {
+  font-size: 19px;
+  margin-top: 0;
+}
+.author {
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.rating-con {
+  width: 120px;
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.color-mod {
+  color: #0284c7;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.con1 {
+  display: flex;
+}
+.status {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .book-item {
+    width: 100%;
+  }
+  .img {
+    max-width: 50%;
+    width: 200px;
+    height: 250px;
+  }
+  .card {
+    align-self: center;
+  }
+}
