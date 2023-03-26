@@ -10,17 +10,14 @@ class Header extends Component {
 
   changeHomeClick = () => {
     const {homeClick} = this.state
-    this.setState(
-      {homeClick: !homeClick, hamBurgerClick: false},
-      this.callBackFun,
-    )
+    this.setState({homeClick: !homeClick, hamBurgerClick: false})
   }
 
   changeBookClick = () => {
     this.setState(prevState => ({
       bookshelvesClick: !prevState.bookshelvesClick,
     }))
-    this.setState({hamBurgerClick: false}, this.callBackFun)
+    this.setState({hamBurgerClick: false})
   }
 
   logout = () => {
@@ -30,17 +27,11 @@ class Header extends Component {
   }
 
   changeHamBurger = () => {
-    this.setState({homeClick: false, hamBurgerClick: true}, this.callBackFun)
+    this.setState({homeClick: false, hamBurgerClick: true})
   }
 
   removeHam = () => {
-    this.setState({homeClick: true, hamBurgerClick: false}, this.callBackFun)
-  }
-
-  callBackFun = () => {
-    const {hamBurgerClick} = this.state
-    const {click} = this.props
-    click(hamBurgerClick)
+    this.setState({homeClick: true, hamBurgerClick: false})
   }
 
   render() {
