@@ -131,13 +131,22 @@ class TopRatedBooksSlick extends Component {
     }
   }
 
+  replaceWindow = () => {
+    const {history} = this.props
+    history.replace('/shelf')
+  }
+
   render() {
     return (
       <>
         {' '}
         <div className="home-flex">
           <h1 className="top-head">Top Rated Books</h1>
-          <button className="btn btn-fix btn-flex-carousel" type="button">
+          <button
+            className="btn btn-fix btn-flex-carousel"
+            type="button"
+            onClick={this.replaceWindow}
+          >
             Find Books
           </button>
         </div>

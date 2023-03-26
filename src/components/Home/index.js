@@ -11,6 +11,11 @@ class Home extends Component {
     this.setState({hamBurgerClick: value})
   }
 
+  booksShelves = () => {
+    const {history} = this.props
+    history.replace('/shelf')
+  }
+
   render() {
     const {hamBurgerClick} = this.state
     return (
@@ -27,7 +32,11 @@ class Home extends Component {
                   insightful recommendations.
                 </p>
 
-                <button className="btn btn-fix btn-flex" type="button">
+                <button
+                  className="btn btn-fix btn-flex"
+                  type="button"
+                  onClick={this.booksShelves}
+                >
                   Find Books
                 </button>
               </div>

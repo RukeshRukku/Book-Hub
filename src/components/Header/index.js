@@ -65,10 +65,7 @@ class Header extends Component {
                 </Link>
               </li>
               <li className="list-li" onClick={this.changeBookClick}>
-                <Link
-                  to="/bookshelves"
-                  className={`links-deco ${bookClassName}`}
-                >
+                <Link to="/shelf" className={`links-deco ${bookClassName}`}>
                   Bookshelves
                 </Link>
               </li>
@@ -107,10 +104,7 @@ class Header extends Component {
                   </Link>
                 </li>
                 <li className="list-li" onClick={this.changeBookClick}>
-                  <Link
-                    to="/bookshelves"
-                    className={`links-deco ${bookClassName}`}
-                  >
+                  <Link to="/shelf" className={`links-deco ${bookClassName}`}>
                     Bookshelves
                   </Link>
                 </li>
