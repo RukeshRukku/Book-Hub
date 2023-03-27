@@ -1,7 +1,6 @@
 import './index.css'
 import {Link} from 'react-router-dom'
 import {BsFillStarFill} from 'react-icons/bs'
-import FilteredBookItem from '../FilteredBookItem'
 
 const FilteredBooks = props => {
   const {details} = props

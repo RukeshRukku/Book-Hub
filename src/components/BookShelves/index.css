@@ -85,6 +85,15 @@
 .container-sm {
   display: none;
 }
+.loader-container1 {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+}
 
 @media (max-width: 767px) {
   .bookShelves-bottom {
@@ -119,5 +128,10 @@
   .books {
     padding: 0;
     width: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  .un-order-head {
+    font-size: 17px;
   }
 }

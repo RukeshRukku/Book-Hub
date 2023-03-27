@@ -29,6 +29,10 @@ class TopRatedBooksSlick extends Component {
     this.setState({data: updatedData, apiStatus: apiStatusConstants.success})
   }
 
+  refresh = () => {
+    this.getTopRatedBooksData()
+  }
+
   failureView = () => (
     <div className="home-failure">
       <img
@@ -39,8 +43,8 @@ class TopRatedBooksSlick extends Component {
       <p className="home-para" style={{textAlign: 'center', marginTop: '10px'}}>
         Something went wrong, Please try again.
       </p>
-      <button className="btn btn-fix" type="button">
-        Retry
+      <button className="btn btn-fix" type="button" onClick={this.refresh}>
+        Try Again
       </button>
     </div>
   )
@@ -140,7 +144,6 @@ class TopRatedBooksSlick extends Component {
   render() {
     return (
       <>
-        {' '}
         <div className="home-flex">
           <h1 className="top-head">Top Rated Books</h1>
           <button

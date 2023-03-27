@@ -6,15 +6,7 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import {MdRemoveCircle} from 'react-icons/md'
 
 class Header extends Component {
-  state = {hamBurgerClick: false, homeClick: true, bookShelvesClick: false}
-
-  changeHomeClick = () => {
-    this.setState({homeClick: true, bookShelvesClick: false})
-  }
-
-  changeBookClick = () => {
-    this.setState({homeClick: false, bookShelvesClick: true})
-  }
+  state = {hamBurgerClick: false}
 
   logout = () => {
     const {history} = this.props
@@ -31,9 +23,7 @@ class Header extends Component {
   }
 
   render() {
-    const {hamBurgerClick, bookShelvesClick, homeClick} = this.state
-    const homeClass = homeClick ? 'color-change' : ''
-    const bookClass = bookShelvesClick ? 'color-change' : ''
+    const {hamBurgerClick} = this.state
     return (
       <>
         <nav className="header-nav-lg">

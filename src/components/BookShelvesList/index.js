@@ -4,7 +4,7 @@ const BookShelvesList = props => {
   const {details, click, check} = props
   const {value, label, id} = details
   const change = () => {
-    click(id, value)
+    click(id, value, label)
   }
   const className = check ? 'change-color-btn' : ''
   const className2 = check ? 'design-btn' : ''

@@ -52,9 +52,17 @@
     width: 100%;
   }
   .img {
-    max-width: 50%;
     width: 200px;
     height: 250px;
+  }
+  .card {
+    align-self: center;
+  }
+}
+@media (min-width: 1100px) {
+  .img {
+    width: 150px;
+    height: 200px;
   }
   .card {
     align-self: center;
