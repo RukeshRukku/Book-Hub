@@ -121,7 +121,7 @@ class BookDetails extends Component {
     <div className="loader-container1">
       <img
         src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746450/Group_7522_2x_qasadv.png"
-        alt="home-failure"
+        alt="failure view"
         className="home-failure-img"
       />
       <p className="home-para" style={{textAlign: 'center', marginTop: '20px'}}>

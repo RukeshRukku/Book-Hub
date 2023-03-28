@@ -1,6 +1,6 @@
 import './index.css'
 import {Component} from 'react'
-import {withRouter} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Slider from 'react-slick'
@@ -37,7 +37,7 @@ class TopRatedBooksSlick extends Component {
     <div className="home-failure">
       <img
         src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746450/Group_7522_2x_qasadv.png"
-        alt="home-failure"
+        alt="failure view"
         className="home-failure-img"
       />
       <p className="home-para" style={{textAlign: 'center', marginTop: '10px'}}>
@@ -112,9 +112,11 @@ class TopRatedBooksSlick extends Component {
           const {id, coverPic, title, authorName} = eachLogo
           return (
             <div className="slick-item" key={id}>
-              <img className="logo-image" src={coverPic} alt="company logo" />
-              <h1 className="carousel-title top-head">{title}</h1>
-              <p className="carousel-para">{authorName}</p>
+              <Link to={`/books/${id}`} className="link-decoration-remove">
+                <img className="logo-image" src={coverPic} alt="company logo" />
+                <h1 className="carousel-title top-head">{title}</h1>
+                <p className="carousel-para">{authorName}</p>
+              </Link>
             </div>
           )
         })}

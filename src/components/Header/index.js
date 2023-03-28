@@ -36,12 +36,12 @@ class Header extends Component {
               />
             </Link>
             <ul className="header-links">
-              <li className="list-li" onClick={this.changeHomeClick}>
+              <li className="list-li">
                 <Link to="/" className="links-deco">
                   Home
                 </Link>
               </li>
-              <li className="list-li" onClick={this.changeBookClick}>
+              <li className="list-li">
                 <Link to="/shelf" className="links-deco">
                   Bookshelves
                 </Link>

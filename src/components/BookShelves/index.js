@@ -115,7 +115,7 @@ class BookShelves extends Component {
     <div className="loader-container1">
       <img
         src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746450/Group_7522_2x_qasadv.png"
-        alt="home-failure"
+        alt="failure view"
         className="home-failure-img"
       />
       <p className="home-para" style={{textAlign: 'center', marginTop: '10px'}}>
@@ -141,7 +141,7 @@ class BookShelves extends Component {
       >
         <img
           src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746417/Asset_1_1_2x_e6j4kq.png"
-          alt="null"
+          alt="no books"
           style={{width: '50%', marginBottom: '30px'}}
         />
         <p
@@ -172,6 +172,7 @@ class BookShelves extends Component {
                 type="button"
                 className="transparent-button"
                 onClick={this.clickToSearch}
+                testId="searchButton"
               >
                 <BsSearch />
               </button>

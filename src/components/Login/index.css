@@ -68,9 +68,6 @@
 
 @media (max-width: 767px) {
   .login-total-lg {
-    display: none;
-  }
-  .login-total-sm {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,6 +82,7 @@
     height: 300px;
     width: 300px;
     margin-bottom: 30px;
+    border-radius: 50%;
   }
   .form {
     width: 90%;

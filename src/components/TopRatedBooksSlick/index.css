@@ -56,6 +56,10 @@
   align-self: center;
   height: 400px;
 }
+.link-decoration-remove {
+  text-decoration: none;
+  color: #000000;
+}
 @media (max-width: 1100px) {
   .top-head {
     font-size: 20px;

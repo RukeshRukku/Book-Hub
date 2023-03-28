@@ -52,88 +52,46 @@ class Login extends Component {
       return <Redirect to="/" />
     }
     return (
-      <>
-        <div className="login-total-lg">
-          <img
-            src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679789326/Rectangle_1467_2x_bannbh_yuldph.png"
-            alt="website login"
-            className="website-login"
-          />
-          <div className="form-con">
-            <form onSubmit={this.submit} className="form">
-              <img
-                src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746532/Group_7731_3x_vaunxw.png"
-                alt="login website logo"
-                className="website-logo"
-              />
-              <label htmlFor="username" className="label">
-                Username*
-              </label>
-              <input
-                type="text"
-                className="form-input"
-                placeholder="Username"
-                id="username"
-                onChange={this.changeUsername}
-              />
-              <label htmlFor="password" className="label">
-                Password*
-              </label>
-              <input
-                type="password"
-                className="form-input"
-                placeholder="Password"
-                id="password"
-                onChange={this.changePassword}
-              />
-              {showErrorMsg && <p className="error-msg">{errorMsg}</p>}
-              <button type="submit" className="login-btn">
-                Login
-              </button>
-            </form>
-          </div>
+      <div className="login-total-lg">
+        <img
+          src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679789326/Rectangle_1467_2x_bannbh_yuldph.png"
+          alt="website login"
+          className="website-login"
+        />
+        <div className="form-con">
+          <form onSubmit={this.submit} className="form">
+            <img
+              src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746532/Group_7731_3x_vaunxw.png"
+              alt="login website logo"
+              className="website-logo"
+            />
+            <label htmlFor="username" className="label">
+              Username*
+            </label>
+            <input
+              type="text"
+              className="form-input"
+              placeholder="Username"
+              id="username"
+              onChange={this.changeUsername}
+            />
+            <label htmlFor="password" className="label">
+              Password*
+            </label>
+            <input
+              type="password"
+              className="form-input"
+              placeholder="Password"
+              id="password"
+              onChange={this.changePassword}
+            />
+            {showErrorMsg && <p className="error-msg">{errorMsg}</p>}
+            <button type="submit" className="login-btn">
+              Login
+            </button>
+          </form>
         </div>
-        <div className="login-total-sm">
-          <img
-            src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746409/Ellipse_99_2x_wdjlvn.png"
-            alt="website login"
-            className="website-login"
-          />
-          <div className="form-con">
-            <form onSubmit={this.submit} className="form">
-              <img
-                src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746532/Group_7731_3x_vaunxw.png"
-                alt="login website logo"
-                className="website-logo"
-              />
-              <label htmlFor="username" className="label">
-                Username*
-              </label>
-              <input
-                type="text"
-                className="form-input"
-                placeholder="Username"
-                id="username"
-                onChange={this.changeUsername}
-              />
-              <label htmlFor="password" className="label">
-                Password*
-              </label>
-              <input
-                type="password"
-                className="form-input"
-                placeholder="Password"
-                id="password"
-                onChange={this.changePassword}
-              />
-              {showErrorMsg && <p className="error-msg">{errorMsg}</p>}
-              <button type="submit" className="login-btn">
-                Login
-              </button>
-            </form>
-          </div>
-        </div>
-      </>
+      </div>
     )
   }
 }
