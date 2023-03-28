@@ -98,7 +98,6 @@ class BookShelves extends Component {
 
   clickToSearch = () => {
     this.getBooksList()
-    this.setState({searchInput: ''})
   }
 
   loaderView = () => (
@@ -158,27 +157,6 @@ class BookShelves extends Component {
     const {data, searchInput, activeLabel, activeId} = this.state
     return (
       <div className="bookShelves-bottom">
-        <div className="container-sm">
-          <div className="container2">
-            <input
-              type="search"
-              className="search-input"
-              placeholder="Search"
-              values={searchInput}
-              onChange={this.changeInput}
-            />
-            <div className="container3">
-              <button
-                type="button"
-                className="transparent-button"
-                onClick={this.clickToSearch}
-                testId="searchButton"
-              >
-                <BsSearch />
-              </button>
-            </div>
-          </div>
-        </div>
         <div className="un-order-lis-width">
           <h1 className="un-order-head">Bookshelves</h1>
           <ul className="un-order-lis">
@@ -201,7 +179,7 @@ class BookShelves extends Component {
                   type="search"
                   className="search-input"
                   placeholder="Search"
-                  values={searchInput}
+                  value={searchInput}
                   onChange={this.changeInput}
                 />
                 <div className="container3">
@@ -209,6 +187,7 @@ class BookShelves extends Component {
                     type="button"
                     className="transparent-button"
                     onClick={this.clickToSearch}
+                    testid="searchButton"
                   >
                     <BsSearch />
                   </button>

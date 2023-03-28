@@ -11,7 +11,6 @@
   font-family: 'Roboto';
   min-height: 90vh;
   display: flex;
-  flex-direction: row;
 }
 .un-order-lis-width {
   width: 20%;
@@ -82,9 +81,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.container-sm {
-  display: none;
-}
 .loader-container1 {
   width: 100%;
   height: 90vh;
@@ -94,7 +90,11 @@
   align-items: center;
   background-color: #e5e5e5;
 }
-
+@media (max-width: 1099px) {
+  .un-order-lis-width {
+    width: 31%;
+  }
+}
 @media (max-width: 767px) {
   .bookShelves-bottom {
     display: flex;
@@ -109,18 +109,12 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .container-sm {
-    display: flex;
-  }
   .container2 {
     width: 90%;
   }
   .un-order-lis-width {
     padding: 0;
     margin-top: 20px;
-  }
-  .container1 {
-    display: none;
   }
   .lis-flex {
     flex-direction: column;
@@ -129,9 +123,10 @@
     padding: 0;
     width: 100%;
   }
-}
-@media (max-width: 1000px) {
+  .shelf-head {
+    display: none;
+  }
   .un-order-head {
-    font-size: 17px;
+    font-size: 25px;
   }
 }

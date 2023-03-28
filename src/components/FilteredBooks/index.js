@@ -19,6 +19,7 @@ const FilteredBooks = props => {
                 color="gold"
                 size={20}
                 style={{alignSelf: 'center'}}
+                className="star"
               />
               <p className="rating">{rating}</p>
             </div>

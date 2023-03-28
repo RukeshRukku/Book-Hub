@@ -47,6 +47,37 @@
   margin-bottom: 0;
   margin-right: 10px;
 }
+@media (min-width: 768px) and (max-width: 1099px) {
+  .book-item {
+    width: 100%;
+  }
+  .img {
+    width: 250px;
+    height: 300px;
+  }
+  .card {
+    align-self: center;
+  }
+  .book-title {
+    font-size: 23px;
+  }
+  .card {
+    width: 50%;
+  }
+  .author {
+    font-size: 18px;
+  }
+  .rating-con {
+    font-size: 17px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .star {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
 @media (max-width: 767px) {
   .book-item {
     width: 100%;
