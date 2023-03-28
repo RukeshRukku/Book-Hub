@@ -34,57 +34,53 @@ class Header extends Component {
     const {hamBurgerClick} = this.state
     const className = hamBurgerClick ? 'flex' : 'none'
     return (
-      <>
-        <nav className="header-nav-sm">
-          <ul className="header-nav-con">
-            <li>
-              <Link to="/">
-                <img
-                  src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746458/Group_7731_sn5dsk.png"
-                  alt="website logo"
-                  className="header-website-logo"
-                />
-              </Link>
-            </li>
-            <li>
-              <GiHamburgerMenu
-                size={30}
-                color="#475569"
-                className="icon"
-                onClick={this.changeHamBurger}
+      <nav className="lg">
+        <div
+          className="flex-main"
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}
+        >
+          <div className="flex-link-ham">
+            <Link to="/">
+              <img
+                src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746458/Group_7731_sn5dsk.png"
+                alt="website logo"
+                className="header-website-logo"
               />
-            </li>
-          </ul>
-          <ul className={`sm-con header-links ${className}`}>
-            <li className="list-li" onClick={this.changeHomeClick}>
-              <Link to="/" className="links-deco">
-                Home
-              </Link>
-            </li>
-            <li className="list-li" onClick={this.changeBookClick}>
-              <Link to="/shelf" className="links-deco">
-                Bookshelves
-              </Link>
-            </li>
-            <li className="list-li">
-              <button
-                type="button"
-                className="btn btn-fix"
-                onClick={this.logout}
-              >
-                Logout
-              </button>
-            </li>
-            <li className="list-li-icon">
-              <MdRemoveCircle
-                size={30}
-                className="icon"
-                onClick={this.removeHam}
-              />
-            </li>
-          </ul>
-        </nav>
-      </>
+            </Link>
+            <GiHamburgerMenu
+              size={30}
+              color="#475569"
+              className="icon"
+              onClick={this.changeHamBurger}
+            />
+          </div>
+          <div className={`links-con ${className}`}>
+            <ul className="un-order">
+              <li className="li">
+                <Link to="/" className="links-deco">
+                  Home
+                </Link>
+              </li>
+              <li className="li">
+                <Link to="/shelf" className="links-deco">
+                  Bookshelves
+                </Link>
+              </li>
+            </ul>
+            <button className="btn btn-fix" type="button" onClick={this.logout}>
+              Logout
+            </button>
+            <MdRemoveCircle
+              size={30}
+              className="icon"
+              onClick={this.removeHam}
+            />
+          </div>
+        </div>
+      </nav>
     )
   }
 }

@@ -1,10 +1,21 @@
-.header-links {
-  list-style-type: none;
-  padding-inline-start: 0;
+.lg {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #ffffff;
+}
+.li {
+  margin-right: 20px;
+}
+.flex-main {
   display: flex;
+  justify-content: space-between;
+}
+.icon {
+  display: none;
 }
 .header-nav-con {
-  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,13 +25,7 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-.list-li {
-  margin-left: 20px;
-  align-self: center;
-}
-.list-li-icon {
-  display: none;
-}
+
 .btn-fix {
   align-self: center;
 }
@@ -33,39 +38,35 @@
   color: #0284c7;
   font-weight: 600;
 }
-.btn-transparent {
-  background-color: transparent;
-  font-size: 20px;
-  outline: none;
-  border-width: 0;
-  cursor: pointer;
-}
-.header-nav-sm {
+.links-con {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px solid #e5e5e5;
-  background-color: #ffffff;
-  padding-left: 5%;
-  padding-right: 5%;
 }
-.icon {
-  display: none;
+.un-order {
+  display: flex;
+  padding-inline-start: 0;
+  list-style: none;
 }
+
 @media (max-width: 767px) {
   .header-nav-con {
     height: 10vh;
     width: 90%;
   }
-  .header-nav-sm {
+  .flex-link-ham {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 2px solid #e4e7eb;
+  }
+  .flex-main {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #e5e5e5;
-    background-color: #ffffff;
-    padding-left: 0;
-    padding-right: 0;
+  }
+  .lg {
+    padding: 0;
   }
   .header-website-logo {
     height: 35px;
@@ -75,40 +76,21 @@
     cursor: pointer;
     align-self: center;
   }
-  .header-links {
-    width: 85%;
-    justify-content: space-between;
-  }
-  .list-li {
-    margin-left: 0;
-  }
-  .sm-con {
-    width: 100%;
-    background-color: #ffffff;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #e5e5e5;
-  }
   .links-deco {
     font-size: 16px;
   }
   .btn-fix {
     font-size: 16px;
   }
-  .flex {
-    display: flex;
-    margin-bottom: 0;
-    margin-top: 0;
-    justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
   .none {
     display: none;
   }
-  .list-li-icon {
-    display: flex;
+  .links-con {
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 2px solid #e4e7eb;
   }
 }

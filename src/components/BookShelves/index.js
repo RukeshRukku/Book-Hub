@@ -128,6 +128,7 @@ class BookShelves extends Component {
 
   nullView = () => {
     const {searchInput} = this.state
+    const searchValue = searchInput
     return (
       <div
         style={{
@@ -143,11 +144,8 @@ class BookShelves extends Component {
           alt="no books"
           style={{width: '50%', marginBottom: '30px'}}
         />
-        <p
-          className="home-para"
-          style={{textAlign: 'center', marginTop: '10px'}}
-        >
-          Your search for {searchInput} did not find any matches.
+        <p className="home-para">
+          Your search for {searchValue} did not find any matches.
         </p>
       </div>
     )
