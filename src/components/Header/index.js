@@ -35,28 +35,25 @@ class Header extends Component {
     const className = hamBurgerClick ? 'flex' : 'none'
     return (
       <nav className="lg">
-        <div
-          className="flex-main"
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-          }}
-        >
-          <div className="flex-link-ham">
-            <Link to="/">
-              <img
-                src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746458/Group_7731_sn5dsk.png"
-                alt="website logo"
-                className="header-website-logo"
+        <div className="flex-main">
+          <ul className="flex-link-ham">
+            <li>
+              <Link to="/">
+                <img
+                  src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746458/Group_7731_sn5dsk.png"
+                  className="header-website-logo"
+                />
+              </Link>
+            </li>
+            <li>
+              <GiHamburgerMenu
+                size={30}
+                color="#475569"
+                className="icon"
+                onClick={this.changeHamBurger}
               />
-            </Link>
-            <GiHamburgerMenu
-              size={30}
-              color="#475569"
-              className="icon"
-              onClick={this.changeHamBurger}
-            />
-          </div>
+            </li>
+          </ul>
           <div className={`links-con ${className}`}>
             <ul className="un-order">
               <li className="li">
