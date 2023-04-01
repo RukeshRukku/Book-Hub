@@ -192,15 +192,19 @@ class BookShelves extends Component {
                 </div>
               </div>
             </div>
-            <ul className="un-order-lis lis-flex">
-              {data.length > 0
-                ? data.map(each => (
+            {data.length > 0 ? (
+              <>
+                <ul className="un-order-lis lis-flex">
+                  {data.map(each => (
                     <FilteredBooks details={each} key={each.id} />
-                  ))
-                : this.nullView()}
-            </ul>
+                  ))}
+                </ul>
+                <Footer />
+              </>
+            ) : (
+              this.nullView()
+            )}
           </div>
-          <Footer />
         </div>
       </div>
     )

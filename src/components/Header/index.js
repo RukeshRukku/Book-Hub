@@ -41,6 +41,7 @@ class Header extends Component {
               <Link to="/">
                 <img
                   src="https://res.cloudinary.com/dkwmqsgbu/image/upload/v1679746458/Group_7731_sn5dsk.png"
+                  alt="website logo"
                   className="header-website-logo"
                 />
               </Link>
