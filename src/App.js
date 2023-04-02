@@ -12,16 +12,27 @@ import ActiveContext from './context/ActiveContext'
 // use the below bookshelvesList for rendering read status of book items in Bookshelves Route
 
 class App extends Component {
-  state = {active: 'Home'}
+  state = {active: 'Home', hamBurgerClick: false}
 
   change = value => {
     this.setState({active: value})
   }
 
+  changeBurger = value => {
+    this.setState({hamBurgerClick: value})
+  }
+
   render() {
-    const {active} = this.state
+    const {active, hamBurgerClick} = this.state
     return (
-      <ActiveContext.Provider value={{active, changeActive: this.change}}>
+      <ActiveContext.Provider
+        value={{
+          active,
+          changeActive: this.change,
+          changeHamBurgerClickWithClick: this.changeBurger,
+          hamBurgerClick,
+        }}
+      >
         <Switch>
           <Route exact path="/login" component={Login} />
           <ProtectedRoute exact path="/" component={Home} />

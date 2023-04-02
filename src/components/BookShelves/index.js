@@ -5,6 +5,7 @@ import Loader from 'react-loader-spinner'
 import {BsSearch} from 'react-icons/bs'
 import BookShelvesList from '../BookShelvesList'
 import FilteredBooks from '../FilteredBooks'
+import ActiveContext from '../../context/ActiveContext'
 
 import Header from '../Header'
 import Footer from '../Footer'
@@ -186,53 +187,62 @@ class BookShelves extends Component {
   }
 
   render() {
-    const {searchInput, activeLabel, activeId} = this.state
     return (
-      <div>
-        <Header />
-        <div className="bookShelves-bottom">
-          <div className="un-order-lis-width">
-            <h1 className="un-order-head">Bookshelves</h1>
-            <ul className="un-order-lis">
-              {bookshelvesList.map(each => (
-                <BookShelvesList
-                  details={each}
-                  key={each.id}
-                  check={each.id === activeId}
-                  click={this.changeActiveIdAndValue}
-                />
-              ))}
-            </ul>
-          </div>
-          <div className="books">
+      <ActiveContext.Consumer>
+        {value => {
+          const {hamBurgerClick} = value
+          const {searchInput, activeLabel, activeId} = this.state
+          return (
             <div>
-              <div className="container1">
-                <h1 className="shelf-head">{activeLabel} Books</h1>
-                <div className="container2">
-                  <input
-                    type="search"
-                    className="search-input"
-                    placeholder="Search"
-                    value={searchInput}
-                    onChange={this.changeInput}
-                  />
-                  <div className="container3">
-                    <button
-                      type="button"
-                      className="transparent-button"
-                      onClick={this.clickToSearch}
-                      testid="searchButton"
-                    >
-                      <BsSearch />
-                    </button>
+              <Header />
+              {hamBurgerClick ? null : (
+                <div className="bookShelves-bottom">
+                  <div className="un-order-lis-width">
+                    <h1 className="un-order-head">Bookshelves</h1>
+                    <ul className="un-order-lis">
+                      {bookshelvesList.map(each => (
+                        <BookShelvesList
+                          details={each}
+                          key={each.id}
+                          check={each.id === activeId}
+                          click={this.changeActiveIdAndValue}
+                        />
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="books">
+                    <div>
+                      <div className="container1">
+                        <h1 className="shelf-head">{activeLabel} Books</h1>
+                        <div className="container2">
+                          <input
+                            type="search"
+                            className="search-input"
+                            placeholder="Search"
+                            value={searchInput}
+                            onChange={this.changeInput}
+                          />
+                          <div className="container3">
+                            <button
+                              type="button"
+                              className="transparent-button"
+                              onClick={this.clickToSearch}
+                              testid="searchButton"
+                            >
+                              <BsSearch />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      {this.renderReturn()}
+                    </div>
                   </div>
                 </div>
-              </div>
-              {this.renderReturn()}
+              )}
             </div>
-          </div>
-        </div>
-      </div>
+          )
+        }}
+      </ActiveContext.Consumer>
     )
   }
 }

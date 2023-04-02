@@ -6,6 +6,7 @@ import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 import Header from '../Header'
 import Footer from '../Footer'
+import ActiveContext from '../../context/ActiveContext'
 
 const apiStatusConstants = {
   initial: 'INITIAL',
@@ -199,10 +200,17 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="total-home">
-        <Header />
-        {this.renderReturnData()}
-      </div>
+      <ActiveContext.Consumer>
+        {value => {
+          const {hamBurgerClick} = value
+          return (
+            <div className="total-home">
+              <Header />
+              {hamBurgerClick ? null : this.renderReturnData()}
+            </div>
+          )
+        }}
+      </ActiveContext.Consumer>
     )
   }
 }
