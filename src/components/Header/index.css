@@ -4,6 +4,8 @@
   justify-content: space-between;
   background-color: #ffffff;
   align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .logo {
   height: 50px;
@@ -46,9 +48,8 @@
 .top-header {
   display: flex;
   background-color: #ffffff;
-  padding: 20px;
-  padding-right: 5%;
-  padding-left: 5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .header-bottom {
   align-self: center;
@@ -63,13 +64,17 @@
   }
   .total-header {
     flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
   }
   .top-header {
     width: 100%;
     justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
   }
   .total-header {
-    background-color: #e5e5e5;
+    background-color: #ffffff;
   }
   .home-un-order-list {
     flex-direction: row;
@@ -88,6 +93,7 @@
     align-items: flex-start;
     height: 90vh;
     width: 100%;
+    background-color: #e5e5e5;
   }
   .none {
     display: none;

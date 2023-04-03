@@ -180,7 +180,7 @@ class Home extends Component {
                           <img
                             className="logo-image"
                             src={coverPic}
-                            alt="company logo"
+                            alt={title}
                           />
                           <h1 className="carousel-title top-head">{title}</h1>
                           <p className="carousel-para">{authorName}</p>
